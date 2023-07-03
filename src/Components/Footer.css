@@ -1,0 +1,14 @@
+footer {
+  display: grid;
+  height: 30vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+  align-items: start;
+  justify-content: center;
+  background-color: aliceblue;
+}
+
+.footer-img {
+  max-width: 100%;
+  height: 24vh;
+}

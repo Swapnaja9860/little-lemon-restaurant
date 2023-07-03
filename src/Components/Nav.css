@@ -1,6 +1,6 @@
-nav{
+/* nav{
     height : 400px;
-}
+} */
 
 ul {
   display: flex;
@@ -10,14 +10,17 @@ ul {
   color: var(--primary-color-green);
   /* background-color: var(--primary-color-yellow); */
   font-weight: bold;
- 
+
   /* flex-wrap: wrap;  */
   /* Allow the items to wrap on smaller screens */
 }
 
+.nav-links ul{
+    flex-direction: column; 
+}
+
 li {
   flex: 1;
-  /* margin: 0; */
   list-style: none;
 }
 

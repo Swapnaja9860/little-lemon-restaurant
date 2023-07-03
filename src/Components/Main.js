@@ -15,9 +15,9 @@ function Main() {
         <article className='specials'>
             <Specials/>
         </article>
-        <article className='testimonials'>
+        {/* <article className='testimonials'>
             <Testimonials/>
-        </article>
+        </article> */}
         <article className='about'>
             <About/>
         </article>
