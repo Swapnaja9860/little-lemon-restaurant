@@ -24,17 +24,18 @@ h3{
     font-size: 1.1rem;
 }
 
-section,
-article {
+article{
   display: grid;
   height : 35vh;
-  grid-template-rows: 2fr 2fr 2fr 2fr;
+  margin-top: 2%;
+  align-items: center;
 }
 
 
 
 .highlights {
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr 2fr;
   grid-gap : 20px;
   align-items: center;
   justify-content: center;
