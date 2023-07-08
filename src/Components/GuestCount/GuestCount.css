@@ -1,0 +1,33 @@
+.guest-count {
+  display: flex;
+  flex: 1 1 40vw;
+  align-items: center;
+  font-size: 16px;
+}
+
+.guest-count label {
+  font-weight: bold;
+}
+
+.guest-count input {
+  width: 12vw;
+  height: 4vh;
+  text-align: center;
+}
+
+.guest-count button {
+  font-size: 16px;
+  width: 3vw;
+  height: 5vh;
+  background-color: var(--primary-color-yellow);
+  border: none;
+  cursor: pointer;
+}
+
+.guest-count button:hover {
+  background-color: #e0e0e0;
+}
+
+.guest-count button:active {
+  background-color: #d0d0d0;
+}

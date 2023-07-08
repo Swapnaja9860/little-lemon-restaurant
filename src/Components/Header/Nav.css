@@ -1,16 +1,19 @@
-/* nav {
-  height: 400px;
-} */
+nav .nav-header{ 
+  background-color: black;
+}
 
 ul {
   display: flex;
-  height: 10%;
+  height: 10vh;
   justify-content: center;
   align-items: center;
   color: var(--primary-color-green);
-  /* background-color: var(--primary-color-yellow); */
-  font-weight: bold;
   list-style: none;
+}
+
+.nav-header ul{
+  background-color: black;
+  font-weight: bold;
 }
 
 ul li {

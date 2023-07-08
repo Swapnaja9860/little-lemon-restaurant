@@ -1,0 +1,9 @@
+.time{
+    display: flex;
+    align-items: center;
+}
+
+.time input{
+    width: 37vh;
+    height: 6vh;
+}

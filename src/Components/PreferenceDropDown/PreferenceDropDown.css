@@ -1,0 +1,9 @@
+.preference {
+  display: flex;
+  align-items: center;
+}
+
+select {
+  width: 33vh;
+  height: 5.5vh; /* Set your desired dynamic height */
+}

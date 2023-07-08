@@ -1,6 +1,7 @@
 import React from 'react';
-import Special from '../images/restaurant.png';
-import './Special.css';
+import Special from '../../images/restaurant.png'
+import './Specials.css';
+import { Link } from 'react-router-dom';
 
 function Specials() {
   return (
@@ -15,7 +16,7 @@ function Specials() {
           Experience a culinary journey like no other with our top best cuisines. Indulge in flavors from around the world,
           expertly crafted by our talented chefs.
         </p>
-        <button className='card-button'>Order</button>
+        <Link to="/home">Order and deilever --</Link>
       </article>
 
       <article className='card'>

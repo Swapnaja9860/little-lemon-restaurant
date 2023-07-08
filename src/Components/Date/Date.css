@@ -1,0 +1,10 @@
+.calender {
+  display: flex;
+  align-items: center;
+  /* font-size: 16px; */
+}
+
+.custom-calendar{
+  width: 40vh;
+  height: 5vh;
+}

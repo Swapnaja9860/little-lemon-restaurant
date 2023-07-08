@@ -1,0 +1,15 @@
+.reservation {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  height: 50vh;
+}
+
+.reservation-content{
+  background-color: black;
+  color: white;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  margin-top: 0px;
+  /* margin-left: 6%;
+  margin-right: 6%; */
+}

@@ -1,0 +1,20 @@
+form {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  grid-gap: 4vh;
+  padding: 4vh;
+  padding-left: 10vh;
+  padding-right: 10vh;
+  /* margin-left: 6%;
+  margin-right: 6%; */
+  background-color: var(--primary-color-yellow);
+}
+
+
+label {
+  font-weight: bold;
+  padding: 3vh;
+  /* margin-bottom: 8px; */
+}
