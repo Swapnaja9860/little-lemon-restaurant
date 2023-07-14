@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
 import './PreferenceDropDown.css'
 
 const PreferenceDropDown = ({options, selectedOption, handleSelect, label}) => {
 
   return (
     <div className='preference'>
-     <label>Preference: </label>
+     <label>{label} </label>
      <select onChange={handleSelect}>
-      <option value={selectedOption}>Roof Top</option>
+      <option value={selectedOption}>Select an option</option>
       {options.map((option) => (
         <option key={option} value={option}>
           {option}

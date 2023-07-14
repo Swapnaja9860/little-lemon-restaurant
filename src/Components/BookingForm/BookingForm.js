@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import './BookingForm.css'
+import React, {useState} from 'react';
+import './BookingForm.css';
 import GuestsCount from '../GuestCount/GuestsCount';
 import PreferenceDropDown from '../PreferenceDropDown/PreferenceDropDown';
 import DatePickerComponent from '../Date/Date';
-import Time from '../Time/Time';
-import Button from '../Button/Button';
+import { useReducer } from 'react';
+
 
 function BookingForm() {
 
@@ -19,8 +19,9 @@ function BookingForm() {
     const Option = e.target.value;
     setSelectedOption(Option);
   };
-
+   
   const handleDateChange = (date) => {
+    dispatch({type: 'update', payload: date})
     setSelectedDate(date);
   };
 
@@ -35,24 +36,46 @@ function BookingForm() {
     console.log("---------------------", count);
     console.log("---------------------", selectedOption);
   }
+
+  // reducer function
+
+    const updateTimes = (date) => {
+        // return fetchAPI(date)
+    }
+
+    const reducerFun = (state, action) =>{
+        switch(action.type){
+            case 'update':
+                console.log("inside reducer")
+                updateTimes(action.payload)
+                return state;
+        }
+    }
+  const availableTime = ["7.00", "8.00"]
+  const [state, dispatch] = useReducer(reducerFun, availableTime)
+  console.log("--------state-------", state)
+ 
   return (
     <>
-          <form onSubmit={handleSubmit}>
-                <div>
-                    <DatePickerComponent selectedDate={selectedDate} handleDateChange={handleDateChange}/>
-                </div>
-                <div>
-                    <Time time={time} handleTimeChange={handleTimeChange}/>
-                </div>
-                <div>
-                    <GuestsCount count={count} setCount={setCount}/>
-                </div>
-                <div>
-                    <PreferenceDropDown options={options} selectedOption={selectedOption} handleSelect={handleSelect} label="Prefernces :"/>
-                </div>
+         <form>
+            <section>
+                <DatePickerComponent data-test-id='date'  selectedDate={selectedDate} handleDateChange={handleDateChange} />
+            </section>
+            <section>
+                <PreferenceDropDown options={state} selectedOption={setTime} handleSelect={handleTimeChange} label="Available Time:" />
+            </section>
+            <section>
+                <GuestsCount count={count} setCount={setCount} />
+            </section>
+            <section>
+                <PreferenceDropDown options={options} selectedOption={selectedOption} handleSelect={handleSelect} label="Preferences:" />
+            </section>
+            <section>
                 {/* <Button title="Pay Now"/> */}
-                <button onSubmit={handleSubmit} style={{color: 'blue'}}>Pay Now</button>
-            </form>
+                <button onSubmit={handleSubmit} style={{ color: 'blue' }}>Pay Now</button>
+            </section>
+        </form>
+
     </>
   )
 }

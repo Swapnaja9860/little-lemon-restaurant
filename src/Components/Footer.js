@@ -7,10 +7,10 @@ import FooterImg from '../images/restaurant.png'
 function Footer() {
   return (
     <footer>
-      <div className='item'>
+      <article className='item'>
         <img src={FooterImg} className='footer-img'/>
-      </div>
-     <div  className='item'>
+      </article>
+     <article className='item'>
       <nav className='nav-links'>
         <ul>
           <h4>Navigation</h4>
@@ -20,8 +20,8 @@ function Footer() {
           <li><Link to='/order'>Order</Link></li>
         </ul>
       </nav>
-    </div>
-    <div  className='item'>
+    </article>
+    <article className='item'>
       <nav className='nav-links'>
         <ul>
           <h4>Contact</h4>
@@ -30,8 +30,8 @@ function Footer() {
           <li><Link to='/about'>Email</Link></li>
         </ul>
       </nav>
-    </div>
-    <div  className='item'>
+    </article>
+    <article  className='item'>
       <nav className='nav-links'>
         <ul>
           <h4>Social Media Links</h4>
@@ -40,7 +40,7 @@ function Footer() {
           <li><Link to='/reservation'>Facebook</Link></li>
         </ul>
       </nav>
-    </div>
+    </article>
     </footer>
   );
 }

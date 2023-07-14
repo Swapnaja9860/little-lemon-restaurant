@@ -2,12 +2,7 @@
 import Header from '../Components/Header/Header'
 import Footer from '../Components/Footer';
 import React from 'react';
-import DatePickerComponent from '../Components/Date/Date';
-import Restaurant from '../images/restaurant.png'
 import './BookingPage.css'
-import GuestsCount from '../Components/GuestCount/GuestsCount';
-import PreferenceDropDown from '../Components/PreferenceDropDown/PreferenceDropDown'
-import Time from '../Components/Time/Time'
 import BookingForm from '../Components/BookingForm/BookingForm';
 
 
