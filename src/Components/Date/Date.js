@@ -14,11 +14,12 @@ export default function DatePickerComponent({selectedDate, handleDateChange}) {
 
   return (
     <div className='calender'>
-      <label>Date:</label>
+      <label htmlFor='custom-calender'>Date:</label>
       <DatePicker
         selected={selectedDate}
         onChange={handleDateChange}
         ref={datePickerRef}
+        id="custom-calender"
         className="custom-calendar"
       />
       <span className="calendar-icon" onClick={toggleDatePicker}>

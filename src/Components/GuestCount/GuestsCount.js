@@ -18,17 +18,21 @@ function GuestsCount({count, setCount}) {
   };
 
   return (
-    <div className='guest-count'>
-     <label>Guests Count:</label>
-     <button onClick={decrementCount}><FaMinus/></button>
-     <input
-        type="number"
-        value={count}
-        onChange={handleChange}
-        className="number-input"
-      />
-      <button onClick={incrementCount}><FaPlus/></button>
-    </div>
+ <div className="guest-count">
+  <label htmlFor="number-input">Guests Count:</label>
+  <button onClick={decrementCount}><FaMinus /></button>
+  <input
+    type="number"
+    id="number-input"
+    value={count}
+    onChange={handleChange}
+    className="number-input"
+    min="1"
+    required
+  />
+  <button onClick={incrementCount}><FaPlus /></button>
+</div>
+
   );
 }
 
