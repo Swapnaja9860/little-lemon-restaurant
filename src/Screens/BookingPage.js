@@ -9,7 +9,6 @@ function BookingPage() {
   return (
      <div className='booking'>
       <Header/>
-      <section className='reservation'>
         <article className='reservation-content'>
             <h2> Reserve The Table </h2>
             <p>
@@ -18,7 +17,6 @@ function BookingPage() {
             </p>
         </article>
         <BookingForm/>
-      </section>
        <Footer/>
     </div>
   )

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 function Button({title, redirect}) {
   return (
-    <button><Link to={redirect}>{title}</Link></button>
+    <button className='link'><Link to="/booking">{title}</Link></button>
   )
 }
 

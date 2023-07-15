@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../Components/Header/Nav.css';
 import './Footer.css';
-import FooterImg from '../images/restaurant.png'
+import FooterImg from '../images/original-b59dcb3c6b4dcb6f87e9dc0b9a0e5a23.png'
 
 function Footer() {
   return (

@@ -41,7 +41,8 @@ section .main{
   grid-gap : 8vh;
   padding-left: 10vh;
   padding-right: 10vh;
-  background-color: var(--primary-color-green);
+  background-color: black;
+  color: white;
 }
 
 

@@ -7,17 +7,22 @@ ul {
   height: 10vh;
   justify-content: center;
   align-items: center;
-  color: var(--primary-color-green);
+  color: white;
   list-style: none;
 }
 
 .nav-header ul{
   background-color: black;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 ul li {
   flex: 1;
+}
+
+li img{
+  width: 100%;
+  height: 9vh;
 }
 
 .nav-links ul{

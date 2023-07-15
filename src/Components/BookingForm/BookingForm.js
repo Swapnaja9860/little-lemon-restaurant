@@ -84,7 +84,7 @@ function BookingForm() {
           />
         </section>
         <section>
-          <button type="submit" style={{ color: 'blue' }} disabled={!checkValidation()}>
+          <button type="submit" disabled={!checkValidation()}>
             Pay Now
           </button>
         </section>
