@@ -1,6 +1,7 @@
 import React from 'react';
-import Restaurant from '../images/restaurant.png';
-import Button from './Button/Button';
+import Restaurant from '../../images/restaurant.png';
+import Button from '../Button/Button';
+import './Highlights.css'
 
 function Highlights() {
   return (

@@ -30,35 +30,23 @@ section .main{
 
 .main article{
   display: grid;
-  grid-template-rows: 1fr 3fr 5fr 2fr;
-  height : 35vh;
+  grid-template-rows: 1fr 3fr 5fr;
+  height : 39vh;
   align-items: center;
 }
 
-
-
 .highlights {
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 2fr 2fr 2fr;
-  grid-gap : 10px;
+  grid-template-rows: repeat(4, 2fr);
+  grid-gap : 8vh;
   padding-left: 10vh;
   padding-right: 10vh;
   background-color: var(--primary-color-green);
 }
 
-.highlights img{
-    width : 40%;
-    height: 25vh;
-    box-shadow: 1px;
-    margin: 5%;
-}
-
-.testimonials {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
 
 .specials {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 5vh 10vh 5vh 10vh;
   background-color: var(--primary-color-yellow);
   /* margin: 3%; */
@@ -71,14 +59,14 @@ section .main{
 @media (max-width: 768px) {
   section,
   article {
+    display: grid;
     grid-template-rows: auto; /* Reset grid template rows for mobile devices */
     margin: 2% 5%; /* Adjust margin for mobile devices */
   }
 
-  .highlights,
-  .testimonials,
-  .specials,
-  .about {
+  .specials
+  {
     grid-template-columns: 1fr; /* Change to single column layout for mobile devices */
+    margin-bottom: 20px;
   }
 }

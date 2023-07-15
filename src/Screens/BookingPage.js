@@ -1,4 +1,3 @@
-
 import Header from '../Components/Header/Header'
 import Footer from '../Components/Footer';
 import React from 'react';
@@ -8,7 +7,7 @@ import BookingForm from '../Components/BookingForm/BookingForm';
 
 function BookingPage() {
   return (
-     <>
+     <div className='booking'>
       <Header/>
       <section className='reservation'>
         <article className='reservation-content'>
@@ -18,10 +17,10 @@ function BookingPage() {
                 Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
             </p>
         </article>
-          <BookingForm/>
+        <BookingForm/>
       </section>
        <Footer/>
-    </>
+    </div>
   )
 }
 

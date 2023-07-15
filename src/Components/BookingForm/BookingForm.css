@@ -18,3 +18,9 @@ label {
   padding: 3vh;
   /* margin-bottom: 8px; */
 }
+
+@media(max-width: 786px){
+  form{
+    grid-template-columns: 1fr;
+  }
+}
