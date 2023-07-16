@@ -9,25 +9,26 @@ function BookingForm() {
   const [selectedDate, setSelectedDate] = useState(null);
   const [time, setTime] = useState('');
   const [count, setCount] = useState(0);
-  const [selectedOption, setSelectedOption] = useState("");
-  const options = ["Rotating Table", "Outside Area", "with Dance floor"];
+  const [selectedOption, setSelectedOption] = useState('');
+  const options = ['Rotating Table', 'Outside Area', 'with Dance floor'];
 
-//    reducer function
+  const updateTimes = (date) => {
+    // return fetchAPI(date)
+  };
 
-    const updateTimes = (date) => {
-        // return fetchAPI(date)
+  const reducerFun = (state, action) => {
+    switch (action.type) {
+      case 'update':
+        console.log('inside reducer');
+        updateTimes(action.payload);
+        return state;
+      default:
+        return state;
     }
+  };
 
-    const reducerFun = (state, action) =>{
-        switch(action.type){
-            case 'update':
-                console.log("inside reducer")
-                updateTimes(action.payload)
-                return state;
-        }
-    }
-  const availableTime = ["7.00", "8.00"]
-  const [state, dispatch] = useReducer(reducerFun, availableTime)
+  const availableTime = ['7.00', '8.00'];
+  const [state, dispatch] = useReducer(reducerFun, availableTime);
 
   const handleSelect = (e) => {
     const option = e.target.value;
@@ -44,14 +45,18 @@ function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("---------------------", selectedDate);
-    console.log("---------------------", time);
-    console.log("---------------------", count);
-    console.log("---------------------", selectedOption);
+    if (selectedOption && count > 1) {
+      console.log('---------------------', selectedDate);
+      console.log('---------------------', time);
+      console.log('---------------------', count);
+      console.log('---------------------', selectedOption);
+    } else {
+      console.log('Form is not valid');
+    }
   };
 
   const checkValidation = () => {
-    return (selectedOption !== "" && count > 1)
+    return selectedOption && count > 1;
   };
 
   return (
@@ -66,7 +71,7 @@ function BookingForm() {
         </section>
         <section>
           <PreferenceDropDown
-            options={["7.00", "8.00"]}
+            options={state}
             selectedOption={time}
             handleSelect={handleTimeChange}
             label="Available Time:"
